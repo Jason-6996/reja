@@ -72,7 +72,7 @@
   margin-bottom: 29.46px;
 }
 
-.main_frame .marginer {
+.main_frame .left_frame .marginer {
   position: relative;
   width: 220px;
   height: 0px;
@@ -88,7 +88,25 @@
   width: 220px;
   height: 126px;
   margin-left: 44px;
-  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left_2-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.personal {
+  font-weight: 550;
+  background: #FFB400;
+
+}
+
+.freecolor {
+  color: #7EB942;
 }
 
 .main_frame .left_frame .left_1-2 {
@@ -117,7 +135,49 @@
   height: 153px;
   margin-top: 25;
   margin-left: 45px;
-  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lan_list {
+  font-family: sans-serif;
+  font-weight: 550;
+}
+
+.lan {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* it is for all percentage index-line in the below name container */
+.container {
+  background-color: white;
+  width: 96%;
+  border-radius: 15px;
+  border: 1px solid #FFB400;
+}
+
+.per_line {
+  background-color: #FFB400;
+  color: white;
+  padding: 1%;
+  text-align: right;
+  font-size: 4px;
+  border-radius: 15px;
+}
+
+.uzb {
+  width: 97%;
+}
+
+.kor {
+  width: 80%;
+}
+
+.eng {
+  width: 60%;
 }
 
 .main_frame .left_frame .left_1_3 {
@@ -177,7 +237,40 @@
   height: 252px;
   margin-top: 25px;
   margin-left: 45px;
-  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.skil_list {
+  font-family: sans-serif;
+  font-weight: 550;
+}
+
+.skil {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.html {
+  width: 90%;
+}
+
+.css {
+  width: 85%;
+}
+
+.js {
+  width: 80%;
+}
+
+.nodejs {
+  width: 75%;
+}
+
+.python {
+  width: 85%;
 }
 
 .main_frame .left_frame .left_5 {

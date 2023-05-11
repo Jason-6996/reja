@@ -26,32 +26,32 @@
             <%=user.profession%>
           </div>
           <div class="left-icons">
-            <a href="" class="link_href">
+            <a href="https://www.facebook.com/" class="link_href">
               <div class="icon">
                 <img src="icon/Facebook.svg" class="icon-1" alt="">
               </div>
             </a>
-            <a href="" class="link_href">
+            <a href="https://www.instagram.com/" class="link_href">
               <div class="icon">
                 <img src="icon/Instagram.svg" class="icon-1" alt="">
               </div>
             </a>
-            <a href="" class="link_href">
+            <a href="https://twitter.com/?lang=en" class="link_href">
               <div class="icon">
                 <img src="icon/Twitter.svg" class="icon-1" alt="">
               </div>
             </a>
-            <a href="" class="link_href">
+            <a href="https://www.linkedin.com/" class="link_href">
               <div class="icon">
                 <img src="icon/Linkeding.svg" class="icon-1" alt="">
               </div>
             </a>
-            <a href="" class="link_href">
+            <a href="https://www.youtube.com/" class="link_href">
               <div class="icon">
                 <img src="icon/Youtube.svg" class="icon-1" alt="">
               </div>
             </a>
-            <a href="" class="link_href">
+            <a href="https://dribbble.com/" class="link_href">
               <div class="icon">
                 <img src="icon/Dribbble.svg" class="icon-1" alt="">
               </div>
@@ -59,11 +59,90 @@
           </div>
         </div>
         <div class="marginer"></div>
-        <div class="left_2"></div>
+        <div class="left_2">
+          <div class="left_2-1">
+            <div class="personal">Age:</div>
+            <%=user.age%>
+          </div>
+          <div class="left_2-1">
+            <div class="personal">Residance:</div>
+            <%=user.residence%>
+          </div>
+          <div class="left_2-1">
+            <div class="personal">Freelance:</div>
+            <div class="freecolor">
+              <%=user.freelance%>
+            </div>
+          </div>
+          <div class="left_2-1">
+            <div class="personal">Address:</div>
+            <%=user.adress%>
+          </div>
+        </div>
         <div class="marginer"></div>
-        <div class="left_3"></div>
+        <div class="left_3">
+          <div class="lan_list">Languages</div>
+          <aside class="lan">
+            <%=user.languages[0]%>
+              <span>100%</span>
+          </aside>
+          <div class="container">
+            <div class="uzb per_line"></div>
+          </div>
+          <aside class="lan">
+            <%=user.languages[1]%>
+              <span>80%</span>
+          </aside>
+          <div class="container">
+            <div class="kor per_line"></div>
+          </div>
+          <aside class="lan">
+            <%=user.languages[2]%>
+              <span>60%</span>
+          </aside>
+          <div class="container">
+            <div class="eng per_line"></div>
+          </div>
+        </div>
         <div class="marginer"></div>
-        <div class="left_4"></div>
+        <div class="left_4">
+          <div class="skil_list">Skills</div>
+          <aside class="skil">
+            <%=user.skills[0]%>
+              <span>90%</span>
+          </aside>
+          <div class="container">
+            <div class="html per_line"></div>
+          </div>
+          <aside class="skil">
+            <%=user.skills[1]%>
+              <span>85%</span>
+          </aside>
+          <div class="container">
+            <div class="css per_line"></div>
+          </div>
+          <aside class="skil">
+            <%=user.skills[2]%>
+              <span>80%</span>
+          </aside>
+          <div class="container">
+            <div class="js per_line"></div>
+          </div>
+          <aside class="skil">
+            <%=user.skills[3]%>
+              <span>75%</span>
+          </aside>
+          <div class="container">
+            <div class="nodejs per_line"></div>
+          </div>
+          <aside class="skil">
+            <%=user.skills[4]%>
+              <span>85%</span>
+          </aside>
+          <div class="container">
+            <div class="python per_line"></div>
+          </div>
+        </div>
         <div class="marginer"></div>
         <div class="left_5"></div>
         <div class="marginer"></div>
