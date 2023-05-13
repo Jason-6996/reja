@@ -283,6 +283,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 186px;
+  height: 148px;
 }
 
 .extra {
@@ -292,6 +294,55 @@
 
 .cub {
   margin-right: 5px;
+}
+
+.ellip_15 {
+  box-sizing: border-box;
+  position: absolute;
+  left: 30.05px;
+  top: 40.86px;
+}
+
+.ellip_16 {
+  box-sizing: border-box;
+  position: absolute;
+  left: 80.1px;
+  top: 417.22px;
+}
+
+.rectan_52 {
+  box-sizing: border-box;
+  position: absolute;
+  left: 320.43px;
+  top: 344.69px;
+}
+
+.ellip_12 {
+  box-sizing: border-box;
+  position: absolute;
+  left: 550.55px;
+  top: 60.26px;
+}
+
+.ellip_13 {
+  box-sizing: border-box;
+  position: absolute;
+  left: 598.43px;
+  top: 392.69px;
+}
+
+.rectan_51 {
+  box-sizing: border-box;
+  position: absolute;
+  left: 902.43px;
+  top: 90.69px;
+}
+
+.poly {
+  box-sizing: border-box;
+  position: absolute;
+  left: 930.43px;
+  top: 410.69px;
 }
 
 .mid_1 {
@@ -321,6 +372,7 @@
   position: relative;
   width: 499.51px;
   height: 116.74px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -370,12 +422,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 70px;
 }
 
 .servic_head {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-family: 'Inter';
   font-style: normal;
-  margin-top: 80px;
   font-weight: 700;
   font-size: 32px;
   line-height: 123.6%;
@@ -385,10 +442,13 @@
 
 .offer {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
   width: 438px;
   height: 68px;
-  left: 15px;
-  top: 1px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -479,22 +539,12 @@
   position: relative;
   width: 115px;
   height: 22px;
-  /* left: 40px;
-  top: 10px; */
-
-  /* H4 - 18px */
-
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 123.6%;
-  /* or 22px */
-
   text-transform: capitalize;
-
-  /* Black */
-
   color: #2B2B2B;
 }
 
