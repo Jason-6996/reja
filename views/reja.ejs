@@ -16,14 +16,31 @@
     <div class="jumbotron p-3 shadow-sm">
       <form action="/create-item" method="POST" id="create-form">
         <div class="d-flex align-items-center">
-          <input id="create-field" name="item" autofocus autocomplete="off" class="form-control mr-3" type="text"
+          <input id="create-field" name="reja" autofocus autocomplete="off" class="form-control mr-3" type="text"
             style="flex: 1" />
           <button class="btn btn-primary" style="border-radius: 20px">
-            Yangi Reja
+            Yangi Reja Qoshish
           </button>
         </div>
       </form>
     </div>
+
+    <ul id="item-list" class="list-group pb-5">
+      <% items.map(function(item) { %>
+        <li class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
+          <span class="item-text">
+            <%=item.reja%>
+          </span>
+          <div>
+            <button data-id="<%=item.id%>" class="edit-me btn btn-secondary btn-sm mr-1">Ozgartirish</button>
+            <button data-id="<%=item.id%>" class="delete-me btn btn-danger btn-sm">
+              Ochirish
+            </button>
+          </div>
+        </li>
+        <% }) %>
+
+    </ul>
     <button id="clean-all" class="btn btn-danger" style="border-radius: 20px">
       Hamma Rejalarni O'chirish
     </button>
