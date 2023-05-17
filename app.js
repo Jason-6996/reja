@@ -1,5 +1,6 @@
 console.log("Web serverni boshlash");
 const express = require("express");
+const res = require("express/lib/response");
 const app = express();
 
 // pastdagi commentdagilar resume publish qilish uchun kerak bo'lgan codelar
@@ -17,6 +18,7 @@ fs.readFile("database/user.json", "utf-8", (err, data) => {
 
 // MongoDB chaqirish //call mongodb
 const db = require("./server").db();
+const mongodb = require("mongodb");
 
 // 1: Kirish code
 app.use(express.static("public"));
@@ -41,9 +43,33 @@ app.post("/create-item", (req, res) => { /* post is used to bring some informati
   // TODO: code with db here
 });
 
+app.post("/delete-item", (req, res) => {
+  const id = req.body.id;
+  db.collection("plans").deleteOne(
+    { _id: new mongodb.ObjectId(id) }, function (err, data) {
+      res.json({ state: "success" });
+    }
+  );
+});
+
+app.post("/edit-item", (req, res) => {
+  const data = req.body;
+  db.collection("plans").findOneAndUpdate({ _id: new mongodb.ObjectId(data.id) }, { $set: { reja: data.new_input } }, function (err, data) {
+    res.json({ state: "success" });
+  });
+});
+
+app.post("/delete-all", (req, res) => {
+  if (req.body.delete_all) {
+    db.collection("plans").deleteMany(function () {
+      res.json({ state: "hamma rejalar delete o'chirilidi" });
+    });
+  }
+});
+
 
 app.get("/", function (req, res) {
-  console.log('user entered /');
+  console.log("user entered /");
   db.collection("plans").find().toArray((err, data) => {
     if (err) {
       console.log(err);
