@@ -1,5 +1,6 @@
 console.log("Web Serverni boshlash");
 const express = require("express");
+const res = require("express/lib/response");
 const app = express();
 
 //MongoDB connect
@@ -24,6 +25,21 @@ app.post("/create-item", (req, res) => {
   db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
     res.json(data.ops[0]);
   });
+});
+
+app.get("/", function (req, res) {
+  console.log("user entered /");
+  db.collection("plans")
+    .find()
+    .toArray((err, data) => {
+      if (err) {
+        console.log(err);
+        res.end("something went wrong");
+      } else {
+        console.log(data);
+        res.render("reja", { items: data });
+      }
+    });
 });
 
 app.post("/delete-item", (req, res) => {
@@ -54,21 +70,6 @@ app.post("/delete-all", (req, res) => {
       res.json({ state: "hamma rejalar ochirildi" });
     });
   }
-});
-
-app.get("/", function (req, res) {
-  console.log("user entered /");
-  db.collection("plans")
-    .find()
-    .toArray((err, data) => {
-      if (err) {
-        console.log(err);
-        res.end("something went wrong");
-      } else {
-        console.log(data);
-        res.render("reja", { items: data });
-      }
-    });
 });
 
 module.exports = app;
